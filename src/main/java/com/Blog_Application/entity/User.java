@@ -27,7 +27,7 @@ public class User {
 	private String Email;
 	private String Password;
 	private String About;
-	
+	//this is comment for git
 	//Making connection Between Post and User
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<Post> posts = new ArrayList<>();
