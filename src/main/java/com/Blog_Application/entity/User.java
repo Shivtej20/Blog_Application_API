@@ -28,6 +28,7 @@ public class User {
 	private String Password;
 	private String About;
 	//this is comment for git
+	//this is 3 rd commit
 	//Making connection Between Post and User
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<Post> posts = new ArrayList<>();
