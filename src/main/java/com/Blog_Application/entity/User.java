@@ -1,7 +1,12 @@
 package com.Blog_Application.entity;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
+import com.Blog_Application.payloads.CommentDto;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -27,10 +32,12 @@ public class User {
 	private String Email;
 	private String Password;
 	private String About;
-	//this is comment for git
-	//this is 3 rd commit
+	
 	//Making connection Between Post and User
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<Post> posts = new ArrayList<>();
+	
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	private List<Comment> comment = new ArrayList<>();
 }
 

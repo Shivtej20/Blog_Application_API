@@ -5,13 +5,11 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import com.Blog_Application.entity.User;
 import com.Blog_Application.exceptions.ResourceNotFoundException;
-import com.Blog_Application.payloads.PostDto;
 import com.Blog_Application.payloads.PostResponse;
 import com.Blog_Application.payloads.UserDto;
 import com.Blog_Application.repositories.UserRepo;
